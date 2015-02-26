@@ -3,7 +3,7 @@ require(["jquery"], function ($) {
     	var projectsTopUrl = "https://dnfrepos.blob.core.windows.net/output/projects_top.json";
     	var projectsUrl = "https://dnfrepos.blob.core.windows.net/output/projects.json"; 
 
-    	$.getJSON(projectsTopUrl, function(data)
+    	$.getJSON(projectsUrl, function(data)
     	{
 			require(["moment","ko"], function (moment,ko) {
 
@@ -86,7 +86,7 @@ require(["jquery"], function ($) {
 				configureCountFilter(data.Projects.length);
 				filterProjects();				
 
-				
+				/*
 				$.getJSON(projectsUrl, function(data)
     			{
     				configureCountFilter(data.Projects.length);
@@ -94,7 +94,7 @@ require(["jquery"], function ($) {
     				filterProjects();
     			});
 
-
+*/
     			function filterProjects()
     			{   
     				var query = viewModel.query().toLowerCase();
